@@ -160,6 +160,9 @@ $("table").on("click", "#block",function(){
     let id = $(this).closest('tr').find('td:eq(0)').text().trim();
     fetch(`/api/products/delete-product?id=${id}`, {
         method: "DELETE",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
     })
         .then(res => res.json())
         .then(res => {
