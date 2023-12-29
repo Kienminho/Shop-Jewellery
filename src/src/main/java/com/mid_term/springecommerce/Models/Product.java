@@ -17,9 +17,10 @@ public class Product {
     @Column(name = "product_id")
     private Long id;
 
+    @Column(columnDefinition = "NVARCHAR(1000)")
     private String name;
  
-    @Column(columnDefinition = "LONGTEXT")
+    @Column(columnDefinition = "NVARCHAR(1000)")
     private String description;
 
     private int salePrice;
